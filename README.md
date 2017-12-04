@@ -1,7 +1,7 @@
-#automatic-telegram-react
+# automatic-telegram-react
 An attempt to build automatic telegram using React
 
-###TODO :
+## TODO :
 - [x] POC Routing with Auth
 - [x] Make routes components async
 - [x] Import bulma
