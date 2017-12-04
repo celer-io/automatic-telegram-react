@@ -2,10 +2,10 @@
 An attempt to build automatic telegram using React
 
 ###TODO :
-- [x] POC Routing with Auth folowing [this](https://reacttraining.com/react-router/web/example/auth-workflow)
+- [x] POC Routing with Auth
 - [x] Make routes components async
-- [ ] Hide route links when not isAuthenticated
-- [ ] Import bulma
-- [ ] Put router into bulma navbar
+- [x] Import bulma
+- [x] Put router into bulma navbar
 - [ ] Add simpleMde component
-- [ ] And more...
+- [ ] Implement real authService with ajax and local storage (Learn [Redux](https://redux.js.org/docs/advanced/ExampleRedditAPI.html) ?)
+- [ ] Hide route links when not isAuthenticated
