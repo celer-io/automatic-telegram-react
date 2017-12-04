@@ -4,14 +4,18 @@ import { Redirect } from 'react-router-dom'
 import Auth from '../services/auth'
 
 class Login extends React.Component {
-  state = {
-    redirectToReferrer: false
-  }
+  constructor (props) {
+    super(props)
 
-  login = () => {
-    Auth.authenticate(() => {
-      this.setState({ redirectToReferrer: true })
-    })
+    this.state = {
+      redirectToReferrer: false
+    }
+
+    this.login = () => {
+      Auth.authenticate(() => {
+        this.setState({ redirectToReferrer: true })
+      })
+    }
   }
 
   render () {

@@ -2,17 +2,16 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Route,
-  Link // ,
-  // Redirect
+  Link
 } from 'react-router-dom'
 
 import AuthButton from './components/AuthButton'
 import PrivateRoute from './components/PrivateRoute'
-// import Auth from './services/auth'
+import asyncComponent from './components/asyncComponent'
 
-import Login from './routes/Login'
-import Pages from './routes/Pages'
-import Dashboard from './routes/Dashboard'
+const Login = asyncComponent(() => import('./routes/Login'))
+const Pages = asyncComponent(() => import('./routes/Pages'))
+const Dashboard = asyncComponent(() => import('./routes/Dashboard'))
 
 const App = () => (
   <Router>
