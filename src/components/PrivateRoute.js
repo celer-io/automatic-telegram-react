@@ -6,7 +6,7 @@ import {
 
 import Auth from '../services/auth'
 
-export default ({ component: Component, ...rest }) => (
+const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     Auth.isAuthenticated ? (
       <Component {...props} />
@@ -18,3 +18,5 @@ export default ({ component: Component, ...rest }) => (
     )
   )} />
 )
+
+export default PrivateRoute

@@ -1,5 +1,8 @@
 import React from 'react'
-import {withRouter} from 'react-router-dom'
+import {
+  withRouter,
+  Link
+} from 'react-router-dom'
 
 import Auth from '../services/auth'
 
@@ -11,7 +14,7 @@ const AuthButton = withRouter(({ history }) => (
       }}>Sign out</button>
     </p>
   ) : (
-    <p>You are not logged in.</p>
+    <p>You are not logged in, click <Link to='/login'>Here</Link> to login</p>
   )
 ))
 

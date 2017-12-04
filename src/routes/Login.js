@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom'
 
 import Auth from '../services/auth'
 
-export default class Login extends React.Component {
+class Login extends React.Component {
   state = {
     redirectToReferrer: false
   }
@@ -32,3 +32,5 @@ export default class Login extends React.Component {
     )
   }
 }
+
+export default Login

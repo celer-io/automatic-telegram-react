@@ -1,34 +1,32 @@
-import { React, Component } from 'react'
+import React from 'react'
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link // ,
+  // Redirect
 } from 'react-router-dom'
 
 import AuthButton from './components/AuthButton'
 import PrivateRoute from './components/PrivateRoute'
+// import Auth from './services/auth'
 
-import Dashboard from './routes/dashboard'
-import Login from './routes/login'
-import Pages from './routes/pages'
+import Login from './routes/Login'
+import Pages from './routes/Pages'
+import Dashboard from './routes/Dashboard'
 
-class App extends Component {
-  render () {
-    return (
-      <Router>
-        <div>
-          <AuthButton />
-          <ul>
-            <li><Link to='/'>Dashboard</Link></li>
-            <li><Link to='/pages'>Pages</Link></li>
-          </ul>
-          <Route path='/login' component={Login} />
-          <PrivateRoute path='/' component={Dashboard} />
-          <PrivateRoute path='/pages' component={Pages} />
-        </div>
-      </Router>
-    )
-  }
-}
+const App = () => (
+  <Router>
+    <div>
+      <AuthButton />
+      <ul>
+        <li><Link to='/dashboard'>Dashboard</Link></li>
+        <li><Link to='/pages'>Pages</Link></li>
+      </ul>
+      <Route path='/login' component={Login} />
+      <PrivateRoute path='/dashboard' component={Dashboard} />
+      <PrivateRoute path='/pages' component={Pages} />
+    </div>
+  </Router>
+)
 
 export default App
